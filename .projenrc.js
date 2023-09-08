@@ -17,8 +17,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
   majorVersion: 4,
   prerelease: 'beta',
 
-  tsconfig: { compilerOptions: { noUnusedLocals: false }, include: ['assets/**/*.ts'] },
-  tsconfigDev: { compilerOptions: { noUnusedLocals: false } },
+  tsconfig: {
+    compilerOptions: { noUnusedLocals: false },
+    include: ['assets/**/*.ts'],
+    excludes: ['**/node_modules/**'],
+  },
+  tsconfigDev: { compilerOptions: { noUnusedLocals: false }, excludes: ['**/node_modules/**'] },
 
   bundledDeps: [
     'cross-spawn',

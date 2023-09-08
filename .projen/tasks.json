@@ -267,25 +267,13 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --dep dev --upgrade --target=minor --reject='aws-cdk-lib,constructs,jsii-rosetta,jsii,esbuild'"
-        },
-        {
-          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --reject='aws-cdk-lib,constructs,jsii-rosetta,jsii,esbuild'"
-        },
-        {
-          "exec": "npm-check-updates --dep peer --upgrade --target=minor --reject='aws-cdk-lib,constructs,jsii-rosetta,jsii,esbuild'"
-        },
-        {
-          "exec": "npm-check-updates --dep prod --upgrade --target=minor --reject='aws-cdk-lib,constructs,jsii-rosetta,jsii,esbuild'"
-        },
-        {
-          "exec": "npm-check-updates --dep optional --upgrade --target=minor --reject='aws-cdk-lib,constructs,jsii-rosetta,jsii,esbuild'"
+          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,aws-sdk,eslint-config-prettier,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-prettier,eslint,jest-junit,jest,jsii-diff,jsii-docgen,jsii-pacmak,npm-check-updates,open-next,prettier,projen,standard-version,ts-jest,typescript,@aws-crypto/sha256-js,@aws-sdk/client-s3,@aws-sdk/signature-v4,@types/aws-lambda,@types/cross-spawn,@types/fs-extra,@types/micromatch,aws-lambda,cross-spawn,fs-extra,glob,indent-string,jszip,micromatch,node-fetch,serverless-http,aws-cdk-lib,constructs"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade"
+          "exec": "yarn upgrade @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-sdk eslint-config-prettier eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint jest-junit jest jsii-diff jsii-docgen jsii-pacmak npm-check-updates open-next prettier projen standard-version ts-jest typescript @aws-crypto/sha256-js @aws-sdk/client-s3 @aws-sdk/signature-v4 @types/aws-lambda @types/cross-spawn @types/fs-extra @types/micromatch aws-lambda cross-spawn fs-extra glob indent-string jszip micromatch node-fetch serverless-http aws-cdk-lib constructs"
         },
         {
           "exec": "npx projen"
